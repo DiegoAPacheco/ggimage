@@ -91,7 +91,7 @@ GeomImage <- ggproto("GeomImage", Geom,
                              if (is.na(imgs[i])) return(zeroGrob())
 
                              imageGrob(d$x, d$y, d$size, imgs[i], by, hjust,
-                                       d$colour, d$alpha, image_fun, d$angle, asp)
+                                       d$colour, d$alpha, image_fun, d$angle, d$asp)
                          })
                          grobs <- do.call("c", grobs)
                          class(grobs) <- "gList"
